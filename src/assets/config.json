@@ -1,0 +1,16 @@
+{
+    "endPoint": {
+        "url": "https://ENTRAPASS-28069.portmap.io:28069/SmartService/login",
+        "path_variables": "username=#username&password=#password&sourceID=#sourceID&encrypted=#encrypted&LocalDateTime=#LocalDateTime&ConnectedProgram=#ConnectedProgram&DateFormat=#DateFormat&TimeFormat=#TimeFormat"
+    },
+    "loginDetail": {
+        "username": "",
+        "password": "",
+        "sourceID": "",
+        "encrypted": "",
+        "LocalDateTime": "",
+        "ConnectedProgram": "",
+        "DateFormat": "",
+        "TimeFormat": ""
+    }
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>POC Audio</title>
+</head>
+
+<body>
+  <!-- <div class="main-content">
+    <div *ngIf="!callingStatus">Calling...</div>
+    <p>{{ userName }}</p>
+    <div *ngIf="!callingStatus">Outgoing voice call</div>
+
+
+    <div class="container-fluid" style="text-align: center ; margin-top: 200px">
+      <div style="display: flex; align-items: center">
+        <button (click)="leaveCall()" type="button" class="btn"
+          style="color: #0f1012 ; background-color: rgb(130, 154, 169);">
+          Leave
+        </button>
+        <p>Tap to disconnect</p>
+      </div>
+    </div>
+  </div> -->
+  <div class="container-fluid content" style="margin-left: 28%;padding-top: 40px;margin-right: 28%;">
+    <div *ngIf="!callingStatus" style="text-align: center;color: #73767D;">Calling...</div>
+    <div style="text-align: center;color: #181818; font-weight: 400;font-size: 20px;font-family: inherit;">{{ userName
+      }}</div>
+    <div *ngIf="!callingStatus" style="text-align: center;color: #73767D;">Outgoing voice call</div>
+    <div *ngIf="callingStatus" style="text-align: center;color: #73767D;padding-bottom: 550px;">voice call</div>
+    <div *ngIf="!callingStatus" style="text-align: center;padding-bottom: 500px;">
+      <i>
+        <svg width="50" height="50" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M28 23.51C26.76 23.51 25.55 23.31 24.43 22.94C24.33 22.9 24.22 22.89 24.12 22.89C23.86 22.89 23.61 22.99 23.41 23.18L21.21 25.38C18.38 23.93 16.06 21.62 14.62 18.79L16.82 16.59C17.1 16.31 17.18 15.92 17.07 15.57C16.7 14.45 16.5 13.25 16.5 12C16.5 11.45 16.05 11 15.5 11H12C11.45 11 11 11.45 11 12C11 21.39 18.61 29 28 29C28.55 29 29 28.55 29 28V24.51C29 23.96 28.55 23.51 28 23.51ZM13.03 13H14.53C14.6 13.89 14.75 14.76 14.99 15.59L13.79 16.79C13.38 15.59 13.12 14.32 13.03 13ZM27 26.97C25.68 26.88 24.41 26.62 23.2 26.22L24.39 25.03C25.24 25.27 26.11 25.42 26.99 25.48V26.97H27Z"
+            fill="#73767D" />
+          <path d="M25.52 13H22.93V11H28.93V17H26.93V14.41L21.91 19.43L20.5 18.02L25.52 13Z" fill="#73767D" />
+        </svg>
+      </i>
+    </div>
+  </div>
+  <div style="margin-left: 28%;padding-top: 20px;margin-right: 28%;">
+    <div style="text-align: center;">
+      <i (click)="leaveCall()" type="button">
+        <svg width="50" height="50" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M20 40C31.0457 40 40 31.0457 40 20C40 8.9543 31.0457 0 20 0C8.9543 0 0 8.9543 0 20C0 31.0457 8.9543 40 20 40Z"
+            fill="#D45238" />
+          <path
+            d="M26.59 18.52C27.64 19.03 28.63 19.67 29.55 20.43L28.48 21.5C27.9 21.03 27.27 20.61 26.6 20.23V18.52M13.4 18.52V20.22C12.75 20.59 12.12 21.01 11.53 21.49L10.46 20.42C11.37 19.67 12.36 19.04 13.4 18.52ZM20 15C15.46 15 11.34 16.78 8.29 19.67C8.11 19.85 8 20.1 8 20.38C8 20.66 8.11 20.91 8.29 21.08L10.77 23.56C10.95 23.74 11.2 23.85 11.48 23.85C11.75 23.85 12 23.75 12.18 23.57C12.97 22.84 13.86 22.21 14.84 21.72C15.17 21.56 15.4 21.21 15.4 20.82V17.72C16.85 17.25 18.4 17 20 17C21.6 17 23.15 17.25 24.59 17.73V20.83C24.59 21.23 24.82 21.57 25.15 21.73C26.13 22.22 27.03 22.84 27.82 23.58C28 23.75 28.25 23.86 28.52 23.86C28.8 23.86 29.05 23.75 29.23 23.57L31.71 21.09C31.89 20.91 32 20.66 32 20.38C32 20.1 31.89 19.85 31.71 19.67C28.66 16.78 24.54 15 20 15Z"
+            fill="white" />
+        </svg>
+      </i>
+    </div>
+    <div style="text-align: center;color: #73767D; padding-top: 16px;">Tap to disconnect</div>
+  </div>
+
+</body>
+
+</html>

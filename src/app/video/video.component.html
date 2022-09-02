@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>POC Video</title>
+</head>
+
+<body>
+  <div>
+    <div style="margin-left: 24px; margin-top: 20px;">
+      <div>
+        <div *ngIf="!callingStatus" style="text-align: center;color: #73767D;">Calling...</div>
+        <div style="text-align: center;padding-top: 10px;">
+          <i (click)="leaveCall()" type="button">
+            <svg width="50" height="50" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M20 40C31.0457 40 40 31.0457 40 20C40 8.9543 31.0457 0 20 0C8.9543 0 0 8.9543 0 20C0 31.0457 8.9543 40 20 40Z"
+                fill="#D45238" />
+              <path
+                d="M26.59 18.52C27.64 19.03 28.63 19.67 29.55 20.43L28.48 21.5C27.9 21.03 27.27 20.61 26.6 20.23V18.52M13.4 18.52V20.22C12.75 20.59 12.12 21.01 11.53 21.49L10.46 20.42C11.37 19.67 12.36 19.04 13.4 18.52ZM20 15C15.46 15 11.34 16.78 8.29 19.67C8.11 19.85 8 20.1 8 20.38C8 20.66 8.11 20.91 8.29 21.08L10.77 23.56C10.95 23.74 11.2 23.85 11.48 23.85C11.75 23.85 12 23.75 12.18 23.57C12.97 22.84 13.86 22.21 14.84 21.72C15.17 21.56 15.4 21.21 15.4 20.82V17.72C16.85 17.25 18.4 17 20 17C21.6 17 23.15 17.25 24.59 17.73V20.83C24.59 21.23 24.82 21.57 25.15 21.73C26.13 22.22 27.03 22.84 27.82 23.58C28 23.75 28.25 23.86 28.52 23.86C28.8 23.86 29.05 23.75 29.23 23.57L31.71 21.09C31.89 20.91 32 20.66 32 20.38C32 20.1 31.89 19.85 31.71 19.67C28.66 16.78 24.54 15 20 15Z"
+                fill="white" />
+            </svg>
+          </i>
+        </div>
+        <div style="text-align: center;color: #73767D; padding-top: 10px;">Tap to disconnect</div>
+      </div>
+      <div class="container-fluid" style="padding-left: 0px;">
+        <h3 style="text-align: left; font-weight: bolder; padding-bottom: 19px;">Visitor</h3>
+        <div style="height: 250px; width: 250px; border: 1px solid; box-shadow: 0 5px 10px 0 #B0C1D9;" id="local-player"
+          class="player">
+        </div>
+        <!-- <p>{{ userName }}</p> -->
+        <h3 style="padding-top: 30px; font-weight: bolder;">{{userName}}</h3>
+        <div style="height: 250px; width: 250px; border: 1px solid; box-shadow: 0 5px 10px 0 #B0C1D9; "
+          id="remote-player" class="player">
+        </div>
+      </div>
+    </div>
+    <!-- <div style="text-align: center; font-size: xx-large;padding-top: 76%; " *ngIf="!callingStatus">
+      Video call Connecting...
+    </div> -->
+  </div>
+</body>
+
+</html>
